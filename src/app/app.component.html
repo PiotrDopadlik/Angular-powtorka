@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<!--interpolacja-->
+<img src = "{{urlZdj1}}">
+<img [src] = "urlZdj1">
+<!--[] wiązanie z ts do html-->
+<button type = "button" (click) = "zwieksz()">Kliknieto {{licznik}} razy</button>
+<!--() wiązanie z html do ts-->
+<input type = "number"  [(ngModel)] = licznik name = "" id = "">
+<!--[()] wiązanie dwukierunkowe, ngModel w app.module.ts zaimportować FormsModule-->
+<ul>
+  <li *ngFor = "let kurs of kursy">{{kurs}}</li>
+</ul>
+<img src = {{urlZdj3}} *ngIf = "czyAktywne">
+<button type = "button" (click) = "zamiana()" >{{napis}}</button>
